@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+ youtube2codeteca:
+
+  build: .
+
+  env_file:
+    - .env
+
+  environment:
+    APP_NAME: "${APP_NAME}"
+    YOUTUBE_TOKEN: "${YOUTUBE_TOKEN}"
+
+  volumes:
+   - .:/code
